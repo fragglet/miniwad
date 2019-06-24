@@ -38,6 +38,17 @@ def handle_monster(mobj):
 		for state_id in deh9000.states.walk(getattr(mobj, field)):
 			frames[state_id] = "monster"
 
+def handle_player(mobj):
+	for field in ("meleestate", "missilestate"):
+		for state_id in deh9000.states.walk(getattr(mobj, field)):
+			frames[state_id] = "player_fire"
+	for field in ("deathstate", "xdeathstate", "raisestate"):
+		for state_id in deh9000.states.walk(getattr(mobj, field)):
+			frames[state_id] = "corpse"
+	for field in ("spawnstate", "seestate", "painstate"):
+		for state_id in deh9000.states.walk(getattr(mobj, field)):
+			frames[state_id] = "player"
+
 def handle_projectile(mobj):
 	for state_id in deh9000.states.walk(mobj.spawnstate):
 		frames[state_id] = "projectile"
@@ -57,6 +68,8 @@ for mobj_id, mobj in enumerate(deh9000.mobjinfo):
 		handle_projectile(mobj)
 	elif mobj.flags & deh9000.MF_SOLID:
 		handle_obstacle(mobj)
+
+handle_player(deh9000.mobjinfo[deh9000.MT_PLAYER])
 
 for weapon_id, weapon in enumerate(deh9000.weaponinfo):
 	for state_id in deh9000.states.walk(weapon.flashstate):
