@@ -18,6 +18,12 @@ Features:
 * Usable menus!
 * Minimalist status bar
 
+## Screenshots
+
+![Screenshot](sshot1.png)
+
+![Screenshot](sshot2.png)
+
 ## How?
 
 The whole WAD is built to take advantage of
