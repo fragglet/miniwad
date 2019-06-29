@@ -553,6 +553,19 @@ plasa0   22      25
 sgn2a0   22      25
 shota0   22      25
 
+rkeya0    7      16
+rkeyb0    7      16
+rskua0    7      16
+rskub0    7      16
+bkeya0    7      16
+bkeyb0    7      16
+bskua0    7      16
+bskub0    7      16
+ykeya0    7      16
+ykeyb0    7      16
+yskua0    7      16
+yskub0    7      16
+
 ammoa0
 apbxa0
 apbxb0
@@ -603,8 +616,6 @@ bfgfa0
 bfgfb0
 bfs1a0
 bfs1b0
-bkeya0
-bkeyb0
 bluda0
 bludb0
 bludc0
@@ -653,8 +664,6 @@ bosso0
 bpaka0
 broka0
 brs1a0
-bskua0
-bskub0
 bspia0
 bspib0
 bspic0
@@ -914,11 +923,7 @@ puffc0
 puffd0
 pvisa0
 pvisb0
-rkeya0
-rkeyb0
 rocka0
-rskua0
-rskub0
 sarga0
 sargb0
 sargc0
@@ -1127,10 +1132,6 @@ vilew0
 vilex0
 viley0
 vilez0
-ykeya0
-ykeyb0
-yskua0
-yskub0
 
 # List of patches
 [patches]
