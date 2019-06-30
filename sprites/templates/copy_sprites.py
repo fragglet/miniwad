@@ -3,6 +3,12 @@
 import deh9000
 import shutil
 
+# Monsters without MF_COUNTKILL:
+MONSTERS = (
+	deh9000.MT_BOSSBRAIN,
+	deh9000.MT_SKULL,
+)
+
 WEAPONS = (
 	deh9000.MT_SHOTGUN,
 	deh9000.MT_SUPERSHOTGUN,
@@ -62,7 +68,7 @@ for mobj_id, mobj in enumerate(deh9000.mobjinfo):
 		handle_weapon(mobj)
 	elif mobj.flags & deh9000.MF_SPECIAL:
 		handle_pickup(mobj)
-	elif mobj.flags & deh9000.MF_COUNTKILL:
+	elif mobj_id in MONSTERS or (mobj.flags & deh9000.MF_COUNTKILL):
 		handle_monster(mobj)
 	elif mobj.flags & deh9000.MF_MISSILE:
 		handle_projectile(mobj)
