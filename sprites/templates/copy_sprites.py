@@ -19,6 +19,18 @@ WEAPONS = (
 	deh9000.MT_MISC28, # plasma
 )
 
+# Special cased mobjs we don't copy
+IGNORE = (
+	deh9000.MT_BARREL,
+	deh9000.MT_MISC77,
+	deh9000.MT_MISC4,
+	deh9000.MT_MISC5,
+	deh9000.MT_MISC6,
+	deh9000.MT_MISC7,
+	deh9000.MT_MISC8,
+	deh9000.MT_MISC9,
+)
+
 frames = ["empty"] * len(deh9000.states)
 
 def sprite_name(state):
@@ -64,7 +76,9 @@ def handle_obstacle(mobj):
 		frames[state_id] = "obstacle"
 
 for mobj_id, mobj in enumerate(deh9000.mobjinfo):
-	if mobj_id in WEAPONS:
+	if mobj_id in IGNORE:
+		pass
+	elif mobj_id in WEAPONS:
 		handle_weapon(mobj)
 	elif mobj.flags & deh9000.MF_SPECIAL:
 		handle_pickup(mobj)
