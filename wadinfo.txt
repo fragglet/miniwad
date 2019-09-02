@@ -311,7 +311,7 @@ D_ULTIMA
 # List of Pictures (with insertion point)
 [graphics]
 TITLEPIC
-M_DOOM
+M_DOOM      -1  -52
 HELP
 CREDIT
 BOSSBACK

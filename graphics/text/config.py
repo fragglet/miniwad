@@ -5,6 +5,8 @@
 #
 
 white_graphics = {
+	'm_doom': 'miniwad',
+
 	'wibp1': 'P1',
 	'wibp2': 'P2',
 	'wibp3': 'P3',
