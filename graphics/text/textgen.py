@@ -10,7 +10,7 @@ def escape(s):
 
 CMD_FORMAT = """
 convert -background transparent -font Minimal5x7-Regular \
-        -fill {color} -pointsize 15 \
+        -fill {color} -pointsize 8 \
         +antialias "label:{label}" {filename}
 """
 
