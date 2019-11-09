@@ -3,8 +3,10 @@ import os
 import config
 
 def escape(s):
+	if s == "\\":
+		return "\\\\\\\\"
 	return "".join(
-		'\\' + c if c in "\"'\\" else c
+		'\\' + c if c in "\"'" else c
 		for c in s
 	)
 
