@@ -91,12 +91,21 @@ for mobj_id, mobj in enumerate(deh9000.mobjinfo):
 
 handle_player(deh9000.mobjinfo[deh9000.MT_PLAYER])
 
+GUN_FRAME_BY_AMMO = (
+	"gun",
+	"gun",
+	"gun-projectile",
+	"gun-projectile",
+	"gun",
+	"gun-melee",
+)
+
 for weapon_id, weapon in enumerate(deh9000.weaponinfo):
 	for state_id in deh9000.states.walk(weapon.flashstate):
 		frames[state_id] = "gunflash"
 	for field in ("upstate", "downstate", "readystate", "atkstate"):
 		for state_id in deh9000.states.walk(getattr(weapon, field)):
-			frames[state_id] = "gun"
+			frames[state_id] = GUN_FRAME_BY_AMMO[weapon.ammo]
 
 wadinfo_names = set()
 
