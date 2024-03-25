@@ -1,6 +1,6 @@
 # Minimal Doom IWAD
 
-What's the smallest a Doom IWAD can be while still being vaguely playble?
+What's the smallest a Doom IWAD can be while still being vaguely playable?
 An exercise in minimalism.
 
 The result is a WAD file less than a quarter of a megabyte that can in
@@ -17,6 +17,10 @@ Features:
 * No real levels (Bring Your Own Levels)
 * Usable menus!
 * Minimalist status bar
+
+For a similar project that's a bit more playable, check out
+[Squashware Doom](https://github.com/fragglet/squashware), which shrinks the
+Shareware Doom IWAD file to below 2MB. 
 
 ## Screenshots
 
